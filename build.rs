@@ -16,5 +16,7 @@ fn main() {
         "has_to_int_unchecked",
     );
 
+    ac.emit_expression_cfg("{ let mut x = 1; x += &2; }", "has_int_assignop_ref");
+
     autocfg::rerun_path("build.rs");
 }
